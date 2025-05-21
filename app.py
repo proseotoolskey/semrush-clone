@@ -13,6 +13,11 @@ def get_keywords():
     suggestions = response.json()[1]
     return jsonify(suggestions)
 
+@app.route('/')
+def home():
+    return "? Welcome to the SEO Tools API! Use the endpoint /keywords?q=your-search-term"
+
+
 if __name__ == '__main__':
     import os
     port = int(os.environ.get("PORT", 5000))
