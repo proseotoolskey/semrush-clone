@@ -4,7 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: ""
-    startCommand: "python app.py"
-    envVars:
-      - key: PORT
-        value: 10000
+    startCommand: "gunicorn app:app"
